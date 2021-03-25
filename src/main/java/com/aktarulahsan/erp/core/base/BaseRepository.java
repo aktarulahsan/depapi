@@ -10,8 +10,14 @@ import javax.persistence.EntityManager;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import org.springframework.core.env.Environment;
 
 public class BaseRepository  implements CommonFunctions {
 
@@ -21,6 +27,9 @@ public class BaseRepository  implements CommonFunctions {
 
     @Autowired
     private EntityManager entityManager;
+
+    @Autowired
+    private Environment env;
 
 //    @PersistenceContext()
 //    private EntityManager entityManager;
@@ -165,6 +174,46 @@ public class BaseRepository  implements CommonFunctions {
         }
 
     }
+    public void finallyOutputStream(ByteArrayOutputStream baos) {
+
+        if(baos != null) {
+            try {
+                baos.close();
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public Connection getOraConnection() {
+
+        try {
+
+            Class.forName(env.getProperty("spring.datasource.driver-class-name"));
+
+        } catch (ClassNotFoundException e) {
+            System.out.println("Where is your Oracle JDBC Driver?");
+
+        }
+        Connection connection = null;
+        try {
+//            connection = DriverManager.getConnection(env.getProperty("ora.url"), env.getProperty("ora.user"),
+//                    env.getProperty("ora.password"));
+            connection = DriverManager.getConnection(env.getProperty("spring.datasource.url"), env.getProperty("spring.datasource.username"),
+                    env.getProperty("spring.datasource.password"));
+
+        } catch (SQLException e) {
+            System.out.println("Connection Failed! Check output console");
+        }
+        if (connection != null) {
+            return connection;
+        } else {
+            System.out.println("Failed to make connection!");
+            return null;
+        }
+    }
+
 
     public Response baseSingleObject(CriteriaQuery criteria) {
         Response response = new Response();

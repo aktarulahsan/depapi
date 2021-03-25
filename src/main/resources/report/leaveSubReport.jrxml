@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="leaveSubReport" pageWidth="400" pageHeight="250" columnWidth="400" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="5213350a-cf42-4293-82c2-d5bc607f15a4">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="leave_id" class="java.lang.String"/>
+	<field name="usedLeave" class="java.lang.String"/>
+	<field name="balance" class="java.lang.String"/>
+	<field name="leave_opening" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch">
+			<textField>
+				<reportElement x="11" y="-15" width="100" height="15" uuid="c63c310c-787b-45c2-9e13-19b39641bbaf"/>
+				<textFieldExpression><![CDATA[$F{leave_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="-15" width="100" height="15" uuid="f33f5dd8-cfa1-4aff-bfe0-04fc85a62666"/>
+				<textFieldExpression><![CDATA[$F{leave_opening}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="231" y="-15" width="100" height="15" uuid="a2eb2fb4-b5b8-4743-9161-085b81d35d33"/>
+				<textFieldExpression><![CDATA[$F{usedLeave}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="331" y="-15" width="60" height="15" uuid="2d279171-e41f-436f-b188-d69ea81a97f2"/>
+				<textFieldExpression><![CDATA[$F{balance}]]></textFieldExpression>
+			</textField>
+		</band>
+	</background>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+	</detail>
+</jasperReport>

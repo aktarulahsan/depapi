@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="punchReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="730685d1-3a22-4109-adc3-5a9b16a3cb0b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<subDataset name="Dataset1" uuid="d820edc2-f340-41f3-b5ff-65a697c8342f">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="strDate" class="java.lang.String"/>
+		<field name="strShiftName" class="java.lang.String"/>
+		<field name="strOtTime" class="java.lang.String"/>
+		<field name="strInTime" class="java.lang.String"/>
+		<field name="strOutTime" class="java.lang.String"/>
+		<field name="strStatus" class="java.lang.String"/>
+		<field name="strLateTime" class="java.lang.String"/>
+		<field name="strStayTime" class="java.lang.String"/>
+		<field name="strRemarks" class="java.lang.String"/>
+		<field name="dblAttCount" class="java.lang.Double"/>
+	</subDataset>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="companyName" class="java.lang.String"/>
+	<field name="companyAddress" class="java.lang.String"/>
+	<field name="emp_name" class="java.lang.String"/>
+	<field name="emp_type_name" class="java.lang.String"/>
+	<field name="division_name" class="java.lang.String"/>
+	<field name="from_date" class="java.util.Date"/>
+	<field name="to_date" class="java.util.Date"/>
+	<field name="empCardNo" class="java.lang.String"/>
+	<field name="department_name" class="java.lang.String"/>
+	<field name="itemList" class="java.util.List"/>
+	<field name="itemSubList" class="java.util.List"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="134" splitType="Stretch">
+			<textField>
+				<reportElement x="30" y="-4" width="489" height="24" uuid="0b40bc4a-1c3d-466b-8cab-cc765f1df1ef"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Black" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{companyName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="30" y="20" width="490" height="15" uuid="5cbc412c-bf5e-4144-a651-65189c8b6f5e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Narrow" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{companyAddress}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="109" y="90" width="111" height="12" uuid="ad52d1b2-adc9-4688-98e4-7798d4d48e6a"/>
+				<textElement textAlignment="Left">
+					<font fontName="Arial Narrow" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{empCardNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="109" y="102" width="160" height="12" uuid="a10ea41f-acbb-4aad-ba75-a5c3c2940a5f"/>
+				<textElement textAlignment="Left">
+					<font fontName="Arial Narrow" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{emp_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="109" y="114" width="62" height="12" uuid="ea1a78e5-24fd-4eaa-9e6e-9e238f5ec3fb"/>
+				<textElement textAlignment="Left">
+					<font fontName="Arial Narrow" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{emp_type_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="91" width="95" height="12" uuid="62116595-c59e-4dce-bd04-6df5cd292aa2"/>
+				<textElement textAlignment="Left">
+					<font fontName="Arial Narrow" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{division_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="353" y="91" width="66" height="12" uuid="bd42c944-34f7-4408-abb7-42544c21e06d"/>
+				<textElement textAlignment="Left">
+					<font fontName="Arial Narrow" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Division  "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="33" y="114" width="66" height="12" uuid="fb2c3ecb-6e3c-4daf-8220-7ba27e24f339"/>
+				<textElement textAlignment="Left">
+					<font fontName="Arial Narrow" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Designation "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="33" y="102" width="66" height="12" uuid="54f7e378-d00e-4fbb-b499-3f9eb54c2594"/>
+				<textElement textAlignment="Left">
+					<font fontName="Arial Narrow" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Emp Name "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="33" y="90" width="66" height="12" uuid="1bca1d33-4418-46ff-bf04-3f6dabd9abf1"/>
+				<textElement textAlignment="Left">
+					<font fontName="Arial Narrow" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Card No "]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="30" y="35" width="490" height="15" uuid="6d62e0bf-6102-48fd-b54a-9ab2cb4e8e9a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Narrow" isBold="true"/>
+				</textElement>
+				<text><![CDATA[www.deeplaid.com.bd]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="57" width="490" height="17" uuid="96b5a90b-5b50-4f43-a490-9882c98fc3fa"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Black" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Leave Information]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="146" y="74" width="120" height="12" uuid="3e28d263-5c30-449c-bced-a156407d550e"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial Narrow"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd-MM- yyyy").format($F{from_date})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="295" y="74" width="150" height="12" uuid="623dfef9-d90e-4ae8-88a1-6f779056a732"/>
+				<textElement textAlignment="Left">
+					<font fontName="Arial Narrow"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd-MM- yyyy").format($F{to_date})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="273" y="74" width="20" height="12" uuid="d3abee7c-d380-4deb-87f2-b197c0f0e9f1"/>
+				<textElement>
+					<font fontName="Arial Narrow"/>
+				</textElement>
+				<text><![CDATA[To]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="430" y="103" width="62" height="12" uuid="3f2c416d-2555-47b8-96c4-a40c62f7b66e"/>
+				<textElement>
+					<font fontName="Arial Narrow"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{department_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="353" y="103" width="66" height="12" uuid="1feaa447-6ce9-47cd-a166-b87b7cd7f3e5"/>
+				<textElement textAlignment="Left">
+					<font fontName="Arial Narrow" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Department   "]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="419" y="91" width="10" height="12" uuid="b3933c11-9876-41ae-8098-3d68a63c29c9"/>
+				<textElement>
+					<font fontName="Arial Narrow"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="99" y="90" width="10" height="12" uuid="b8a0ba6d-330d-4b85-865f-1130d998cc41"/>
+				<textElement>
+					<font fontName="Arial Narrow"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="99" y="102" width="10" height="12" uuid="9f0d8c45-dacb-491e-9f8e-0faa8078a7e4"/>
+				<textElement>
+					<font fontName="Arial Narrow"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="99" y="114" width="10" height="12" uuid="cba8172d-52c0-42e6-ac64-9ebd05f1c0ca"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Narrow"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="419" y="103" width="10" height="12" uuid="319a14b1-544c-42e1-897b-6f512d937f52"/>
+				<textElement>
+					<font fontName="Arial Narrow"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="10">
+			<frame>
+				<reportElement x="0" y="0" width="555" height="10" uuid="4944a4b0-6cac-4e67-9c8e-00b64a7870a1"/>
+				<staticText>
+					<reportElement x="0" y="0" width="73" height="10" uuid="e6d075b2-9794-42de-8da7-d82766a132aa"/>
+					<box>
+						<pen lineWidth="0.15"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial Narrow" size="8"/>
+					</textElement>
+					<text><![CDATA[Date]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="73" y="0" width="68" height="10" uuid="917f9ed4-4fec-4619-8dce-d57fcc35a18c"/>
+					<box>
+						<pen lineWidth="0.15"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial Narrow" size="8"/>
+					</textElement>
+					<text><![CDATA[Shift Name]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="141" y="0" width="68" height="10" uuid="37250ba5-17d1-4a52-85eb-212fe322cd41"/>
+					<box>
+						<pen lineWidth="0.15"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial Narrow" size="8"/>
+					</textElement>
+					<text><![CDATA[In Time]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="209" y="0" width="68" height="10" uuid="77fcd1a3-873b-4919-997e-c9bf91fd6a59"/>
+					<box>
+						<pen lineWidth="0.15"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial Narrow" size="8"/>
+					</textElement>
+					<text><![CDATA[Out Time]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="413" y="0" width="68" height="10" uuid="baf69d5d-6422-4d13-8c21-75c522017876"/>
+					<box>
+						<pen lineWidth="0.15"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial Narrow" size="8"/>
+					</textElement>
+					<text><![CDATA[Status]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="277" y="0" width="68" height="10" uuid="dbe53946-f3bf-4334-bc9c-d1a5c16bb879"/>
+					<box>
+						<pen lineWidth="0.15"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial Narrow" size="8"/>
+					</textElement>
+					<text><![CDATA[Stay Hour]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="345" y="0" width="68" height="10" uuid="f808fc45-4250-4874-817e-874b2ef7c22b"/>
+					<box>
+						<pen lineWidth="0.15"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial Narrow" size="8"/>
+					</textElement>
+					<text><![CDATA[Late Time]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="481" y="0" width="67" height="10" uuid="ae53c4e8-631a-4a57-9b49-db8e08511009"/>
+					<box>
+						<pen lineWidth="0.15"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial Narrow" size="8"/>
+					</textElement>
+					<text><![CDATA[Comments]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<componentElement>
+				<reportElement x="0" y="0" width="549" height="15" uuid="f7f39f81-0e6d-4874-828a-20fa513dd9b7">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+				</reportElement>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Dataset1" uuid="ff491c87-ffe9-4432-ae49-c232dfe26280">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{itemList})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="15" width="549">
+						<textField>
+							<reportElement x="0" y="0" width="73" height="15" uuid="de0d455c-98bf-479b-8d78-95eb26c1a2ef"/>
+							<box>
+								<pen lineWidth="0.15"/>
+							</box>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Californian FB" size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{strDate}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="73" y="0" width="68" height="15" uuid="c2cdd2f4-2305-487f-a5e1-de206c8631da"/>
+							<box>
+								<pen lineWidth="0.15"/>
+							</box>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Californian FB" size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{strShiftName}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="141" y="0" width="68" height="15" uuid="37f7d238-10c8-4cb2-8829-258867c6fc6f"/>
+							<box>
+								<pen lineWidth="0.15"/>
+							</box>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Californian FB" size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{strInTime}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="209" y="0" width="68" height="15" uuid="7d6e6b9e-38d1-47ca-8f1e-daeede754c33"/>
+							<box>
+								<pen lineWidth="0.15"/>
+							</box>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Californian FB" size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{strOutTime}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="277" y="0" width="68" height="15" uuid="ee15011f-98b6-4e2c-93ac-dac2a2595ae6"/>
+							<box>
+								<pen lineWidth="0.15"/>
+							</box>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Californian FB" size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{strStatus}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="345" y="0" width="68" height="15" uuid="2e4d0910-6de3-458d-bc94-b14f24c2c21e"/>
+							<box>
+								<pen lineWidth="0.15"/>
+							</box>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Californian FB" size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{strLateTime}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="413" y="0" width="68" height="15" uuid="ae285e07-1bf2-40a6-926a-ff83b34d7ef3"/>
+							<box>
+								<pen lineWidth="0.15"/>
+							</box>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Californian FB" size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{strStayTime}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="481" y="0" width="68" height="15" uuid="46b46922-ee67-4436-b929-8b40e18c5362"/>
+							<box>
+								<pen lineWidth="0.15"/>
+							</box>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Californian FB" size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{strRemarks}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+		<band height="66">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="10" uuid="40490630-aa30-47a2-b940-3b33b755482a"/>
+				<box>
+					<pen lineWidth="0.15"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="8"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="100" height="10" uuid="81fb3f80-bf71-4393-a253-f4ca79087b55"/>
+				<box>
+					<pen lineWidth="0.15"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="8"/>
+				</textElement>
+				<text><![CDATA[Number of Attn]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="0" y="10" width="199" height="20" uuid="31193aa3-0b46-432f-8835-fb46e2227f47"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Dataset1" uuid="8532ac97-0afb-43cd-bbef-2169e0adebb3">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{itemSubList})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="20" width="199">
+						<textField>
+							<reportElement x="100" y="0" width="99" height="20" uuid="afae89d5-bc68-437c-aaec-bd8e5868b264"/>
+							<box>
+								<pen lineWidth="0.15"/>
+							</box>
+							<textElement>
+								<font fontName="Californian FB" size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{dblAttCount}.intValue()]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="0" y="0" width="100" height="20" uuid="472109cf-4b87-489f-8c27-feb10f27634d"/>
+							<box>
+								<pen lineWidth="0.15"/>
+							</box>
+							<textElement>
+								<font fontName="Californian FB" size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{strStatus}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+		<band height="20"/>
+	</detail>
+</jasperReport>

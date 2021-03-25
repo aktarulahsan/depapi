@@ -1,29 +1,29 @@
 server:
-  port: 8081
+  port: 8080
 
-
-spring:
-
-  datasource:
-    url: jdbc:mysql://localhost:3306/penguin?useSSL=true
-    username: root
-    password: 123
-    driver-class-name: com.mysql.jdbc.Driver
-
-
-    tomcat:
-      test-while-idle: true
-      validation-query: SELECT 1
-    initialization-mode: never
-    platform: sql
-  jpa:
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL5Dialect
-
-    hibernate:
-      naming:
-        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
-      ddl-auto: validate
 #
+#spring:
+#
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/bplhr?useSSL=true
+#    username: root
+#    password: 123
+#    driver-class-name: com.mysql.jdbc.Driver
+#
+#
+#    tomcat:
+#      test-while-idle: true
+#      validation-query: SELECT 1
+#    initialization-mode: never
+#    platform: sql
+#  jpa:
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL5Dialect
+#
+#    hibernate:
+#      naming:
+#        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+#      ddl-auto: none
+
 check-user-scopes: true
