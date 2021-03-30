@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="bgReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ff24c71b-ecd9-4103-bc51-77297067075d">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="strCardNo" class="java.lang.String"/>
+	<field name="strPhoneNumber2" class="java.lang.String"/>
+	<field name="strEmpName" class="java.lang.String"/>
+	<field name="strBloodGroup" class="java.lang.String"/>
+	<field name="strDepartment" class="java.lang.String"/>
+	<field name="strDivision" class="java.lang.String"/>
+	<field name="strPhoneNumber" class="java.lang.String"/>
+	<field name="strDesignation" class="java.lang.String"/>
+	<group name="Group1">
+		<groupExpression><![CDATA[$F{strDivision}]]></groupExpression>
+		<groupHeader>
+			<band height="16">
+				<textField>
+					<reportElement x="40" y="0" width="100" height="12" uuid="620efd6e-0a7c-4dd5-91b4-8523ffca90fe"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial Narrow" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{strDivision}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="0" width="40" height="12" uuid="7067f492-0d79-454b-852e-16f189957e35"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial Narrow" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Division :]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="Group2">
+		<groupExpression><![CDATA[$F{strDepartment}]]></groupExpression>
+		<groupHeader>
+			<band height="17">
+				<textField>
+					<reportElement x="70" y="0" width="100" height="14" uuid="5c52ac02-8d4b-42a3-b049-b0fdfe253d83"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial Narrow" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{strDepartment}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="4" y="0" width="66" height="14" uuid="0cc9ba0b-3dfe-44a4-b97f-9ff4598e1f2c"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Department :]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="74" splitType="Stretch">
+			<staticText>
+				<reportElement x="30" y="35" width="489" height="15" uuid="7132635f-85a1-45a2-ba21-497fa3e1710f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Narrow" isBold="true"/>
+				</textElement>
+				<text><![CDATA[www.deeplaid.com.bd]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="0" width="488" height="17" uuid="a8f485dc-a934-48e6-b3df-75f948a46f05"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Narrow" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Deeplaid Laboratories Ltd.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="17" width="488" height="14" uuid="978a99da-910b-43b8-8ee1-5e45adbc2b71"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Narrow" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[5th Floor, Al-Habib Complex, Kaptan Bazar, Wari, Dhaka 1203]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="57" width="490" height="17" uuid="885dff52-9f18-4fbb-b4fb-00736ec4f614"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Black" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Blood Group]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="28" splitType="Stretch">
+			<printWhenExpression><![CDATA[new Boolean($V{PAGE_NUMBER} != 1)]]></printWhenExpression>
+			<staticText>
+				<reportElement x="0" y="0" width="180" height="13" uuid="59e21616-ee46-4913-8628-f8312725af9c"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial Narrow" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Deeplaid Laboratories Ltd.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="13" width="250" height="12" uuid="070ebb27-0851-47dd-bd8a-b8625371a15a"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial Narrow" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[5th Floor, Al-Habib Complex, Kaptan Bazar, Wari, Dhaka 1203]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="0" width="555" height="19" uuid="5848b458-346e-4f5c-a20f-77eff24ae24f">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+				</reportElement>
+				<staticText>
+					<reportElement x="0" y="0" width="70" height="19" backcolor="#F2EBEB" uuid="b4bee84e-83d1-4565-aeb3-c0f59bf5825c"/>
+					<box>
+						<pen lineWidth="0.15"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9"/>
+					</textElement>
+					<text><![CDATA[ Card No]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="70" y="0" width="117" height="19" backcolor="#F2EBEB" uuid="919c328f-7dc8-48d6-8922-fbfe09e03731"/>
+					<box>
+						<pen lineWidth="0.15"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9"/>
+					</textElement>
+					<text><![CDATA[Emp.Name]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="187" y="0" width="133" height="19" backcolor="#F2EBEB" uuid="53b79d3e-c95c-45d8-9ff9-350487bbb01c"/>
+					<box>
+						<pen lineWidth="0.15"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9"/>
+					</textElement>
+					<text><![CDATA[Designation]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="320" y="0" width="60" height="19" backcolor="#F2EBEB" uuid="84b763e6-f818-42aa-b58d-c355f5cf9505"/>
+					<box>
+						<pen lineWidth="0.15"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9"/>
+					</textElement>
+					<text><![CDATA[Blood Group]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="380" y="0" width="90" height="19" backcolor="#F2EBEB" uuid="0603e61a-1225-4dc0-8f1a-519e1f3da3a6"/>
+					<box>
+						<pen lineWidth="0.15"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9"/>
+					</textElement>
+					<text><![CDATA[Corporate Number]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="470" y="0" width="84" height="19" backcolor="#F2EBEB" uuid="cb825982-6dee-41bf-9e50-b46b74aa7fc8"/>
+					<box>
+						<pen lineWidth="0.15"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9"/>
+					</textElement>
+					<text><![CDATA[Personal Number]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="13" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<textField>
+				<reportElement x="0" y="0" width="70" height="13" uuid="9a9adf22-0e6c-4890-bf30-faf4a78c8091">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4a1f0a0e-1e11-4474-a7d8-95ddec08ce28"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.15"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Narrow" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{strCardNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="0" width="117" height="13" uuid="06762519-d671-49eb-b24e-c23656cd0604">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e545766b-aee0-4863-aa7c-495177856d7b"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.15"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Narrow" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{strEmpName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="187" y="0" width="133" height="13" uuid="5328b692-6027-4a0a-981b-dec8e7082b4b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9c876270-e36d-410a-adb8-e910a114e288"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.15"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Narrow" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{strDesignation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="0" width="60" height="13" uuid="dd5997dd-c977-4c65-ac11-95b5e989c144">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8b5ce31d-31d1-4dcc-b860-54b46d18f4b3"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.15"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Narrow" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{strBloodGroup}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="0" width="90" height="13" uuid="8cc43bc4-599a-4ab7-9a60-2827d5f326fa">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="328e2b1a-1620-46d2-87d7-b7405037b92d"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.15"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Narrow" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{strPhoneNumber2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="470" y="0" width="84" height="13" uuid="29c2e53f-2980-4cd0-84d4-d11e69954a5e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3d363db9-67a7-4e66-b48f-1e757dc0d95e"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.15"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Narrow" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{strPhoneNumber}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="14" splitType="Stretch">
+			<staticText>
+				<reportElement x="34" y="0" width="256" height="14" uuid="245fa81c-88fb-4c62-9edc-84868b4ff44a"/>
+				<textElement>
+					<font fontName="Arial Narrow" size="8"/>
+				</textElement>
+				<text><![CDATA[Developed By: Deeplaid Laboratories Ltd. (MIS & IT)]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="290" y="0" width="179" height="14" uuid="1c8e3aae-8586-4c4b-add6-111ef340e1ed"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial Narrow" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" Printing Date & Time : "+new SimpleDateFormat("dd-MM- yyyy hh:mm a").format(new Date())]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Master">
+				<reportElement x="480" y="0" width="70" height="14" uuid="4c2bd9d9-ff97-4710-ad17-4d421402a3c0"/>
+				<textElement>
+					<font fontName="Arial Narrow" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page No. "+$V{MASTER_CURRENT_PAGE}+" of "+$V{MASTER_TOTAL_PAGES}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

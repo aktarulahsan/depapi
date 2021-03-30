@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="pabxReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4032ed8a-ab55-4e09-8b8f-79806af822b0">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="strDivision" class="java.lang.String"/>
+	<field name="strDepartment" class="java.lang.String"/>
+	<field name="strPhoneNumber2" class="java.lang.String"/>
+	<field name="strEmpName" class="java.lang.String"/>
+	<field name="strPhoneNumber" class="java.lang.String"/>
+	<field name="strDesignation" class="java.lang.String"/>
+	<field name="strPabx" class="java.lang.String"/>
+	<field name="strCorporatePhoneNumber" class="java.lang.String"/>
+	<group name="Group1">
+		<groupExpression><![CDATA[$F{strDepartment}]]></groupExpression>
+		<groupHeader>
+			<band height="15">
+				<textField>
+					<reportElement x="77" y="0" width="98" height="15" uuid="00ea8656-48d6-43cc-83f3-55472e408889"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial Narrow" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{strDepartment}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="7" y="0" width="70" height="15" uuid="2478de00-7ef6-4e3c-91e3-2d286a414d02"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial Narrow" size="8"/>
+					</textElement>
+					<text><![CDATA[Department :]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="94" splitType="Stretch">
+			<staticText>
+				<reportElement x="30" y="35" width="489" height="15" uuid="9e0ea042-3486-4927-9712-9dcd4abc181f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Narrow" isBold="true"/>
+				</textElement>
+				<text><![CDATA[www.deeplaid.com.bd]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="0" width="488" height="17" uuid="3197b9bb-ff60-45cf-ac19-2b255c7fc2ba"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Narrow" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Deeplaid Laboratories Ltd.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="17" width="488" height="14" uuid="85b2cfcd-0c7f-4afb-9ed6-321c7fbf4aaa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Narrow" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[5th Floor, Al-Habib Complex, Kaptan Bazar, Wari, Dhaka 1203]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="57" width="490" height="17" uuid="32ed5716-880f-4eea-bce9-6cd9ba63ee0e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Black" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pabx & Mobile Information]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="30" y="74" width="490" height="14" uuid="e6e5977c-cd77-401a-8d16-c17ebb9fe082"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Narrow" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{strDivision}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<printWhenExpression><![CDATA[new Boolean($V{PAGE_NUMBER} != 1)]]></printWhenExpression>
+			<staticText>
+				<reportElement x="0" y="4" width="180" height="13" uuid="a581f9fa-12ae-4b81-bc8c-652ac9d4df41"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial Narrow" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Deeplaid Laboratories Ltd.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="17" width="250" height="12" uuid="707838d5-1995-4ea9-a504-211fd052bc3e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial Narrow" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[5th Floor, Al-Habib Complex, Kaptan Bazar, Wari, Dhaka 1203]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="19" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="0" width="555" height="19" uuid="fb8716b6-2cde-46b5-9211-a77723a0771f">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+				</reportElement>
+				<staticText>
+					<reportElement x="0" y="0" width="70" height="19" backcolor="#F2EBEB" uuid="7ef659f2-4b59-4776-ac70-7c47aa5b0e89"/>
+					<box>
+						<pen lineWidth="0.15"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9"/>
+					</textElement>
+					<text><![CDATA[Sl.No]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="70" y="0" width="117" height="19" backcolor="#F2EBEB" uuid="bd47de69-499e-43e7-9cb1-bcf9d3c03641"/>
+					<box>
+						<pen lineWidth="0.15"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9"/>
+					</textElement>
+					<text><![CDATA[Emp.Name]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="187" y="0" width="133" height="19" backcolor="#F2EBEB" uuid="c060569d-370d-4d9f-8618-be1b272f65ed"/>
+					<box>
+						<pen lineWidth="0.15"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9"/>
+					</textElement>
+					<text><![CDATA[Designation]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="320" y="0" width="60" height="19" backcolor="#F2EBEB" uuid="8d2b137e-8a53-4584-b911-588cf2e8160e"/>
+					<box>
+						<pen lineWidth="0.15"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9"/>
+					</textElement>
+					<text><![CDATA[Pabx]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="380" y="0" width="90" height="19" backcolor="#F2EBEB" uuid="93a0b179-fb76-44be-8cc6-7c03a98f6a7e"/>
+					<box>
+						<pen lineWidth="0.15"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9"/>
+					</textElement>
+					<text><![CDATA[Corporate Number]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="470" y="0" width="84" height="19" backcolor="#F2EBEB" uuid="7f2a11e6-6921-4ec0-8048-096df250797b"/>
+					<box>
+						<pen lineWidth="0.15"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9"/>
+					</textElement>
+					<text><![CDATA[Personal Number]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="14" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="0" width="554" height="14" uuid="49f622c6-edd6-4fd5-bbf6-0de98b6f4fa0"/>
+				<box>
+					<pen lineWidth="0.15"/>
+				</box>
+				<textField>
+					<reportElement x="0" y="0" width="70" height="14" uuid="4bb397dd-619e-4e73-8bd7-e9372e019d01"/>
+					<box>
+						<pen lineWidth="0.15"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial Narrow" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="70" y="0" width="117" height="14" uuid="4d2edb61-d9f5-4a30-81ef-9e5234cab11d">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6f39caa6-be48-4ca2-bc31-9b81398d1de2"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.15"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial Narrow" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{strEmpName}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="187" y="0" width="133" height="14" uuid="8d256879-c66c-4139-87cf-524d7476581a">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2a23c69b-a37a-45cf-b25e-d569efeacef2"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.15"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial Narrow" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{strDesignation}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="320" y="0" width="60" height="14" uuid="45439511-d39b-4ef9-b0fe-2a4eb8193776">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="53fecc25-d515-48dc-a783-231075df9a0f"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.15"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial Narrow" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{strPabx}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="470" y="0" width="84" height="14" uuid="ae403de7-7275-47f7-bcb0-21bf0ae33184">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="85c1ba5b-bf4f-4e68-8a44-5f4879f17b04"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.15"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial Narrow" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{strPhoneNumber}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="380" y="0" width="90" height="14" uuid="e92c36b8-381f-4b96-8a1c-96fe593b3bbf">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9daa2f82-4012-44d5-b7c1-5adaa2d39bb4"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.15"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial Narrow" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{strCorporatePhoneNumber}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="14" splitType="Stretch">
+			<staticText>
+				<reportElement x="34" y="0" width="256" height="14" uuid="83ef91ba-8728-4d48-a461-6e56c7788098"/>
+				<textElement>
+					<font fontName="Arial Narrow" size="8"/>
+				</textElement>
+				<text><![CDATA[Developed By: Deeplaid Laboratories Ltd. (MIS & IT)]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="290" y="0" width="179" height="14" uuid="12a1682e-63d8-4d61-bfa5-d8a4e7d9e255"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial Narrow" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" Printing Date & Time : "+new SimpleDateFormat("dd-MM- yyyy hh:mm a").format(new Date())]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Master">
+				<reportElement x="480" y="0" width="70" height="14" uuid="45a45022-3233-4e0d-81cb-aff0232fed8e"/>
+				<textElement>
+					<font fontName="Arial Narrow" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page No. "+$V{MASTER_CURRENT_PAGE}+" of "+$V{MASTER_TOTAL_PAGES}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

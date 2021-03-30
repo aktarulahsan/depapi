@@ -15,7 +15,14 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import org.springframework.core.env.Environment;
 
@@ -63,6 +70,27 @@ public class BaseRepository  implements CommonFunctions {
             return getErrorResponse("Save fail !!",response);
         }
 
+    }
+
+    public static String getDifferenceDays(Date d1) {
+        final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        Date curentDate= new Date();
+        String a = String.valueOf(ChronoUnit.DAYS.between(d1.toInstant(), curentDate.toInstant()));
+        return a;
+    }
+
+    public static  String calculateAge(Date dates){
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+        Calendar c = Calendar.getInstance();
+        c.setTime(dates);
+        int year = c.get(Calendar.YEAR);
+        int month = c.get(Calendar.MONTH) + 1;
+        int date = c.get(Calendar.DATE);
+        LocalDate l1 = LocalDate.of(year, month, date);
+        LocalDate now1 = LocalDate.now();
+        Period diff1 = Period.between(l1, now1);
+        System.out.println("age:" + diff1.getYears() + "years");
+        return String.valueOf(diff1.getYears());
     }
 
 

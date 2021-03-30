@@ -328,16 +328,7 @@ public class TourReportRepository extends BaseRepository {
 
         }
 
-
-
-
-
-
-
         model.setItemSubList(ooAttanSub);
-
-
-
         modelLists.add(model);
 //        Map<String, Object> parameterMap = new HashMap<String, Object>();
 //        parameterMap.put("SUBREPORT_DIR", CommonFunction.getResoucePath("/punch/punchSubreport"));

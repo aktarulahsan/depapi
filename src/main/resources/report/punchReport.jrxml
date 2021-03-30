@@ -119,7 +119,7 @@
 				<textElement textAlignment="Center">
 					<font fontName="Arial Black" size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Leave Information]]></text>
+				<text><![CDATA[Card Punch Report ]]></text>
 			</staticText>
 			<textField>
 				<reportElement x="146" y="74" width="120" height="12" uuid="3e28d263-5c30-449c-bced-a156407d550e"/>
@@ -284,9 +284,9 @@
 		<band height="20" splitType="Stretch">
 			<componentElement>
 				<reportElement x="0" y="0" width="549" height="15" uuid="f7f39f81-0e6d-4874-828a-20fa513dd9b7">
-					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
 				</reportElement>
-				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
 					<datasetRun subDataset="Dataset1" uuid="ff491c87-ffe9-4432-ae49-c232dfe26280">
 						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{itemList})]]></dataSourceExpression>
 					</datasetRun>
@@ -332,7 +332,7 @@
 							<textFieldExpression><![CDATA[$F{strOutTime}]]></textFieldExpression>
 						</textField>
 						<textField>
-							<reportElement x="277" y="0" width="68" height="15" uuid="ee15011f-98b6-4e2c-93ac-dac2a2595ae6"/>
+							<reportElement x="413" y="0" width="68" height="15" uuid="ee15011f-98b6-4e2c-93ac-dac2a2595ae6"/>
 							<box>
 								<pen lineWidth="0.15"/>
 							</box>
@@ -352,7 +352,7 @@
 							<textFieldExpression><![CDATA[$F{strLateTime}]]></textFieldExpression>
 						</textField>
 						<textField>
-							<reportElement x="413" y="0" width="68" height="15" uuid="ae285e07-1bf2-40a6-926a-ff83b34d7ef3"/>
+							<reportElement x="277" y="0" width="68" height="15" uuid="ae285e07-1bf2-40a6-926a-ff83b34d7ef3"/>
 							<box>
 								<pen lineWidth="0.15"/>
 							</box>
@@ -387,7 +387,7 @@
 				<text><![CDATA[Status]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="100" y="0" width="100" height="10" uuid="81fb3f80-bf71-4393-a253-f4ca79087b55"/>
+				<reportElement x="100" y="0" width="99" height="10" uuid="81fb3f80-bf71-4393-a253-f4ca79087b55"/>
 				<box>
 					<pen lineWidth="0.15"/>
 				</box>
@@ -398,7 +398,7 @@
 			</staticText>
 			<componentElement>
 				<reportElement x="0" y="10" width="199" height="20" uuid="31193aa3-0b46-432f-8835-fb46e2227f47"/>
-				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
 					<datasetRun subDataset="Dataset1" uuid="8532ac97-0afb-43cd-bbef-2169e0adebb3">
 						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{itemSubList})]]></dataSourceExpression>
 					</datasetRun>
@@ -408,7 +408,7 @@
 							<box>
 								<pen lineWidth="0.15"/>
 							</box>
-							<textElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
 								<font fontName="Californian FB" size="8"/>
 							</textElement>
 							<textFieldExpression><![CDATA[$F{dblAttCount}.intValue()]]></textFieldExpression>
@@ -418,7 +418,7 @@
 							<box>
 								<pen lineWidth="0.15"/>
 							</box>
-							<textElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
 								<font fontName="Californian FB" size="8"/>
 							</textElement>
 							<textFieldExpression><![CDATA[$F{strStatus}]]></textFieldExpression>
@@ -429,4 +429,29 @@
 		</band>
 		<band height="20"/>
 	</detail>
+	<pageFooter>
+		<band height="14">
+			<staticText>
+				<reportElement x="34" y="0" width="256" height="14" uuid="243ffa25-345e-4154-acde-be45464a1cd0"/>
+				<textElement>
+					<font fontName="Arial Narrow" size="8"/>
+				</textElement>
+				<text><![CDATA[Developed By: Deeplaid Laboratories Ltd. (MIS & IT)]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="290" y="0" width="179" height="14" uuid="38f45600-7f4c-42da-91df-7d1ced7905e7"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial Narrow" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" Printing Date & Time : "+new SimpleDateFormat("dd-MM- yyyy hh:mm a").format(new Date())]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Master">
+				<reportElement x="480" y="0" width="70" height="14" uuid="65145bb7-fffa-4c27-9902-2da29142d6b7"/>
+				<textElement>
+					<font fontName="Arial Narrow" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page No. "+$V{MASTER_CURRENT_PAGE}+" of "+$V{MASTER_TOTAL_PAGES}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
 </jasperReport>
